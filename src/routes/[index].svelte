@@ -45,7 +45,7 @@
 	}
 </script>
 
-<div class="quiz-page flex flex-col items-center justify-between">
+<div class="page-container flex flex-col gap-5 items-center justify-between">
 	{#if !$quizzesStore.length}
 		<div class="text-2xl text-center">Loading...</div>
 	{:else}
@@ -56,7 +56,7 @@
 			</div>
 		</div>
 		<div>
-			<div class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
+			<div class="p-6 max-w-sm bg-white rounded-lg border border-gray-100 shadow-md">
 				<p class="text-2xl text-center mb-8">
 					{@html quiz.question}
 				</p>
@@ -113,9 +113,3 @@
 		</div>
 	{/if}
 </div>
-
-<style lang="scss">
-	.quiz-page {
-		min-height: calc(100vh - 12rem - 2px);
-	}
-</style>

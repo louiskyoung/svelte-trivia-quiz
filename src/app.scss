@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.page-container {
+	min-height: calc(100vh - 12rem - 2px);
+}

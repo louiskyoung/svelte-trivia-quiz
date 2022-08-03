@@ -14,7 +14,7 @@
 	$: isLoading = !$quizzesStore.length;
 </script>
 
-<div class="home-page flex flex-col items-center justify-between">
+<div class="page-container flex flex-col gap-10 items-center justify-between">
 	<h1 class="text-3xl font-bold text-center">Welcome to the Trivia Challenge!</h1>
 	<p class="text-2xl text-center">You will be presented with 10 True or False questions.</p>
 	<p class="text-2xl text-center">Can you score 100%?</p>
@@ -24,9 +24,3 @@
 		>{isLoading ? 'Loading quizzes...' : "Let's begin!"}
 	</a>
 </div>
-
-<style lang="scss">
-	.home-page {
-		min-height: calc(100vh - 12rem - 2px);
-	}
-</style>

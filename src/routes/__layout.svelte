@@ -2,7 +2,7 @@
 	import '../app.scss';
 </script>
 
-<main class="p-12 rounded-lg border border-gray-300 shadow-md">
+<main class="p-12 rounded-lg border border-gray-200 shadow-md">
 	<slot />
 </main>
 
