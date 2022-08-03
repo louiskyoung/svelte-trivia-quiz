@@ -17,6 +17,9 @@
 
 	afterUpdate(() => {
 		quiz = $quizzesStore[Number(index) - 1];
+		if ($quizzesStore.every((quiz) => quiz.answer)) {
+			goto('/result');
+		}
 	});
 
 	function handleNavigate(button: string) {
@@ -42,6 +45,10 @@
 
 			return store;
 		});
+
+		if (Number(index) < 10) {
+			handleNavigate('next');
+		}
 	}
 </script>
 
