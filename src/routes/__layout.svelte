@@ -2,15 +2,13 @@
 	import '../app.scss';
 </script>
 
-<main>
+<main class="p-12 rounded-lg border border-gray-300 shadow-md">
 	<slot />
 </main>
 
 <style lang="scss">
 	main {
 		width: 480px;
-		margin: 3em calc(50vw - 240px);
-		padding: 3em;
-		border: 1px solid black;
+		margin: 3rem calc(50vw - 240px);
 	}
 </style>
