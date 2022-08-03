@@ -10,6 +10,6 @@ export type Quiz = {
 	answer?: string;
 };
 
-export type Quizzes = Quiz[] | [];
+export type Quizzes = Quiz[];
 
 export const quizzesStore = writable([] as Quizzes);

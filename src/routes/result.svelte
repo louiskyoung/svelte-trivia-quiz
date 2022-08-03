@@ -12,7 +12,11 @@
 <div class="page-container flex flex-col gap-5 items-center justify-between">
 	<div class="text-2xl text-center font-bold">
 		You scored
-		<!-- <div>{} / 10</div> -->
+		<div>
+			{$quizzesStore.reduce((count, quiz) => {
+				return count + (quiz.answer === quiz.correct_answer ? 1 : 0);
+			}, 0)} / 10
+		</div>
 	</div>
 	<div class="p-4 w-sm bg-white rounded-lg border border-gray-100 shadow-md flex flex-col gap-3">
 		{#each $quizzesStore as quiz, i (quiz)}
