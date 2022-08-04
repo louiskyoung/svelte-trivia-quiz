@@ -1,3 +1,15 @@
+<script context="module" lang="ts">
+	/** @type {import('./__types/[...path]').Load} */
+	export function load({ params: { index = '1' } }) {
+		if (!Number(index) || Number(index) > 10) {
+			return {
+				status: 404,
+				error: new Error('Not found')
+			};
+		}
+	}
+</script>
+
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
 	import { page } from '$app/stores';
